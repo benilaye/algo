@@ -1,0 +1,45 @@
+
+ALGORITHM CHECKPOINT_beni
+var 
+i: sentenceLength
+b: numberofwords
+k: numberVowels
+lengthofthesentence ,numberofwords,numberofvowels,i,b,k : INTERGER;
+Sentence: String : characteres;
+sum : INTEGER :=0;
+BEGIN 
+READ (Hello World.);
+WHILE(Sentence[i] <> ".") DO
+sentenceLength := sentenceLength + 1;
+i := i + 1 ;
+END_WHILE
+WHILE(b<sentenceLength) DO
+IF(Sentence[b] = " ") THEN
+numberWords := numberWords+1;
+END_IF
+b:=b+1;
+END_WHILE
+WHILE(k<sentenceLength) DO
+IF(Sentence[k] = "a" OR Sentence[k] = "e" OR Sentence[k] = "i" OR Sentence[k] = "o" OR Sentence[k] = "u") THEN
+numberWords := numberVowels+1;
+END_IF
+k:=k+1;
+END_WHILE
+Write(sentenceLength,numberWords,numberVowels);
+END
+
+{  
+    public static void main(String[] args) {  
+        String string = "Hello world.";  
+        int count = 0;  
+          
+        //Counts each character except space  
+        for(int i = 0; i < string.length(); i++) {  
+            if(string.charAt(i) != ' ')  
+                count++;  
+        }  
+          
+        //Displays the total number of characters present in the given string  
+        System.out.println("Total number of characters in a string: " + count);  
+    }  
+}
