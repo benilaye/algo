@@ -1,29 +1,28 @@
 ALGORITHM CHECKPOINT_beni
-var 
-i: sentenceLength
-b: numberofwords
-k: numberVowels
+VAR 
 lengthofthesentence ,numberofwords,numberofvowels,i,b,k : INTERGER;
-Sentence: String : characteres;
+Sentence: STRING ;
 sum : INTEGER :=0;
 BEGIN 
-READ (Hello World.);
-WHILE(Sentence[i] <> ".") DO
-sentenceLength := sentenceLength + 1;
+
+READ (Sentence);
+i:= 0;
+numberofwords:= 0;
+WHILE(Sentence[i] =" " OR Sentence[i]= ".") DO
+numberofwords:= numberofwords + 1;
 i := i + 1 ;
 END_WHILE
-write (WHILE)
-WHILE(b<sentenceLength) DO
-IF(Sentence[b] = " ") THEN
-numberWords := numberWords+1;
-END_IF
-b:=b+1;
-END_WHILE
+
+k:= 0;
+numberofvowels:= 0;
+
 WHILE(k<sentenceLength) DO
-IF(Sentence[k] = "a" OR Sentence[k] = "e" OR Sentence[k] = "i" OR Sentence[k] = "o" OR Sentence[k] = "u") THEN
-numberWords := numberVowels+1;
+IF(Sentence[k] = "a" OR Sentence[k] = "e" OR Sentence[k] = "i" OR Sentence[k] = "o" OR Sentence[k] = "u")
+ "A" OR Sentence[k] = "E" OR Sentence[k] = "I" OR Sentence[k] = "O" OR Sentence[k] = "U") THEN
+numberofvowels := numberVowels+1;
 END_IF
 k:=k+1;
 END_WHILE
-Write(sentenceLength,numberWords,numberVowels);
+Write("le nombre de mots est :",sentenceLength;
+Write("le nombre de voyelle est :",numberofvowels;
 END
